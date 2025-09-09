@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio Personal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+      
+        .page-section {
+            display: none;
+        }
+        #home {
+            display: block;
+        }
+        
+        
+        .nav-link:hover, .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .nav-link, .btn {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .card {
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: scale(1.02);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+   
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-4 py-4 flex flex-col sm:flex-row justify-between items-center">
+            <a href="#home" class="text-2xl font-bold text-gray-800" onclick="showPage('home')">MI Portafolio</a>
+            <ul class="flex flex-col sm:flex-row mt-4 sm:mt-0 space-y-2 sm:space-y-0 sm:space-x-6 text-lg font-medium">
+                <li><a href="#home" class="nav-link text-gray-600 hover:text-blue-500" onclick="showPage('home')">Inicio</a></li>
+                <li><a href="#about" class="nav-link text-gray-600 hover:text-blue-500" onclick="showPage('about')">Acerca de Mí</a></li>
+                <li><a href="#projects" class="nav-link text-gray-600 hover:text-blue-500" onclick="showPage('projects')">Proyectos</a></li>
+                <li><a href="#skills" class="nav-link text-gray-600 hover:text-blue-500" onclick="showPage('skills')">Habilidades</a></li>
+                <li><a href="#contact" class="nav-link text-gray-600 hover:text-blue-500" onclick="showPage('contact')">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    
+    <main class="container mx-auto p-8">
+
+        
+        <section id="home" class="page-section text-center py-20">
+            <article class="bg-white p-8 rounded-xl shadow-lg">
+                <h1 class="text-5xl md:text-6xl font-extrabold mb-4 text-gray-900">Soy <span class="text-blue-600">Sebastián Menoscal </span></h1>
+                <p class="text-xl md:text-2xl mb-8 text-gray-600">Soy un musico </p>
+            </article>
+        </section>
+
+        
+        <section id="about" class="page-section py-20">
+            <article class="bg-white p-8 rounded-xl shadow-lg">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6 text-center text-gray-900">Acerca de Mí</h2>
+                <div class="flex flex-col md:flex-row items-center md:space-x-8">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSp-7WmGrclnPy4Y7vQMYkdkORBUeQcmyVigw&s" alt="Foto de perfil" class="w-48 h-48 rounded-full border-4 border-blue-500 object-cover mb-4 md:mb-0">
+                    <div>
+                        <p class="text-lg md:text-xl text-gray-600 mb-4">me llamo sebastian tengo 16 años . Me encanta aprender cómo funcionan las cosas en la musica y crear mis propia musica </p>
+                        <p class="text-lg md:text-xl text-gray-600">soy muy alegre tanto , muy amigable , disiplinado en las coasas que me gustan y soy muy empatico  </p>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        
+        <section id="projects" class="page-section py-20">
+            <h2 class="text-4xl md:text-5xl font-bold mb-10 text-center text-gray-900">Mis Proyectos</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <article class="card bg-white p-6 rounded-xl text-center">
+                    <h3 class="text-2xl font-bold mb-2 text-blue-600">Proyecto 1</h3>
+                    <p class="text-gray-500 mb-4">Flowsixsongs</p>
+                </article>
+                
+                <article class="card bg-white p-6 rounded-xl text-center">
+                    <h3 class="text-2xl font-bold mb-2 text-blue-600">Proyecto 2</h3>
+                    <p class="text-gray-500 mb-4">mash.</p>
+                </article>
+            </div>
+        </section>
+
+        
+        <section id="skills" class="page-section py-20">
+            <h2 class="text-4xl md:text-5xl font-bold mb-10 text-center text-gray-900">Mis Habilidades</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="card bg-white p-6 rounded-xl text-center">
+                    <h3 class="text-2xl font-bold mb-2">manejo de vaiedad</h3>
+                </div>
+                <div class="card bg-white p-6 rounded-xl text-center">
+                    <h3 class="text-2xl font-bold mb-2">manejo velocidad</h3>
+                </div>
+                <div class="card bg-white p-6 rounded-xl text-center">
+                    <h3 class="text-2xl font-bold mb-2">jazz</h3>
+                </div>
+                <div class="card bg-white p-6 rounded-xl text-center">
+                    <h3 class="text-2xl font-bold mb-2">rock</h3>
+                </div>
+            </div>
+        </section>
+
+        
+        <section id="contact" class="page-section py-20">
+            <h2 class="text-4xl md:text-5xl font-bold mb-10 text-center text-gray-900">Contacto</h2>
+            <div class="max-w-xl mx-auto bg-white p-8 rounded-xl shadow-lg">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="card bg-white p-6 rounded-xl text-center">
+                    <h3 class="text-2xl font-bold mb-2">whatsapp:06666666669</h3>
+                </div>
+                <div class="card bg-white p-6 rounded-xl text-center">
+                    <h3 class="text-2xl font-bold mb-2">instagram:sebas</h3>
+                </div>
+            </div>
+        </section>
+
+    
+    <footer class="bg-white text-gray-500 text-center p-4 mt-10 shadow-inner">
+        <p>&copy; 2025 sebastian menoscal.</p>
+    </footer>
+
+    
+    <script>
+        
+        function showPage(pageId) {
+            const sections = document.querySelectorAll('.page-section');
+            sections.forEach(section => {
+                section.style.display = 'none';
+            });
+            document.getElementById(pageId).style.display = 'block';
+            window.scrollTo(0, 0); 
+        }
+
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => {
+                link.addEventListener('click', (event) => {
+                    event.preventDefault(); 
+                    const pageId = link.getAttribute('href').substring(1);
+                    showPage(pageId);
+                });
+            });
+
+            
+            const contactForm = document.getElementById('contactForm');
+            const formMessage = document.getElementById('formMessage');
+
+            contactForm.addEventListener('submit', (event) => {
+                event.preventDefault(); // Previene el envío del formulario
+
+                const name = document.getElementById('name').value.trim();
+                const email = document.getElementById('email').value.trim();
+                const message = document.getElementById('message').value.trim();
+
+                if (name === '' || email === '' || message === '') {
+                    formMessage.textContent = 'Por favor, completa todos los campos.';
+                    formMessage.style.color = 'red';
+                    formMessage.style.display = 'block';
+                } else {
+                    formMessage.textContent = 'Mensaje enviado con éxito. ¡Gracias!';
+                    formMessage.style.color = 'green';
+                    formMessage.style.display = 'block';
+                    contactForm.reset(); // Limpia el formulario
+                }
+            });
+        });
+    </script>
+</body>
+</html>
